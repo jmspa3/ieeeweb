@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-!-- Demo content-->
 <section id="section1" style="margin-top:10%;margin-bottom:20%;">
     <div class="container">
         <div class="row">

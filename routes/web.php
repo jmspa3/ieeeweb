@@ -18,7 +18,7 @@ use App\Http\Controllers\Auth\RegisterController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
 
 
@@ -32,4 +32,4 @@ Route::get('/minhaconta/{uuid}',function($uuid){
 
 Auth::routes(['verify'=> true]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/feed', [App\Http\Controllers\HomeController::class, 'index'])->name('feed');
