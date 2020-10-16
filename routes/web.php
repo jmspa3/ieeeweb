@@ -21,10 +21,28 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+Route::get('/RAS', function () {
+    return view('raspage');
+});
+
+Route::get('/IMS', function () {
+    return view('imspage');
+});
+
+Route::get('/CS', function () {
+    return view('cspage');
+});
+
+Route::get('/WIE', function () {
+    return view('wiepage');
+});
+
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
 Route::get('/minhaconta/{uuid}',function($uuid){
     $user = User::where('uuid',$uuid)->first();
     return View::make('myaccount',compact('user'));

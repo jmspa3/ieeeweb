@@ -10899,3 +10899,46 @@ a.text-dark:focus {
   }
 }
 
+.letter1{
+  font-family:'font-letter1';
+}
+.letter2{
+  font-family:'font-letter2';
+}
+.letter3{
+  font-family:'font-letter3';
+}
+
+@font-face {
+  font-family: "font-letter1";
+  src:url("../fonts/NHaasGroteskTXPro-55Rg.ttf") format("truetype");
+    
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "font-letter2";
+  src:url("../fonts/NHaasGroteskTXPro-65Md.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "font-letter3";
+  src:url("../fonts/NHaasGroteskTXPro-75Bd.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.share:hover,.share:active{
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px); 
+  transition:   ease-in 0.3s;
+}
+
+.share{
+  transition:  ease-in 0.9s; 
+}

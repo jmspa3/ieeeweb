@@ -7,6 +7,8 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -23,6 +25,7 @@
         <style>
             body {
                 font-family: 'Nunito';
+                width:100%;
             }
 
             .text-small {
@@ -30,8 +33,7 @@
 }
 
 .header {
-    background-color: #000000;
-    background-image: linear-gradient(to right, #00d2ff 0%, #3a7bd5 100%);
+  
 }
         </style>
     </head>
@@ -39,45 +41,69 @@
             <!-- Demo header-->
 
 
-<script>
 
-$(function () {
-    $(window).on('scroll', function () {
-        if ( $(window).scrollTop() < 100 ) {
-            $('.navbar').removeClass('shadow-sm');
-        } else {
-            $('.navbar').addClass('shadow-sm');
-        }
-    });
-});
-
-</script>
 <!-- Sticky navbar-->
-<header class="header sticky-top" style="margin-bottom:5%;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 ">
-        <div class="container"><a class="navbar-brand" href="#">
-        <img src="ieee.svg" style="width:40%;"></a>
+<header class="header sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light py-3 ">
+        <div class="container"><a class="navbar-brand" style="margin-left:-70px;">
+        <a><img class="entity" src="{{asset('img/ieee.svg')}}" style="width:45%;margin-top:-40px;margin-bottom:-40px;"></a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a class="nav-link" href="{{ url('/') }}">Homepage<span class="sr-only">(current)</span></a></li>
+                    <li class="nav-item active"><a class="nav-link  letter2" href="{{ url('/') }}">Eventos<span class="sr-only">(current)</span></a></li>
                     <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/feed') }}">
-                                    Feed
-                    </a></li>
+                        <a class="nav-link  letter2" href="{{ url('/feed') }}">Projetos</a></li>
+                    
+                    <li class="nav-item dropdown">
+                                <a id="navbarDropdown2"  class="nav-link letter2 dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                 Societies
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right"  style="transition:all 2s  ease-in;
+  -moz-transition:    all 2s  ease-in;
+  -webkit-transition: all 2s  ease-in;
+  -o-transition:      all 2s  ease-in;
+  background:grey;
+  -ms-transition:     all 2s  ease.in ;;margin-top: 24px;margin-right: -53px;border-radius:0px !important;" id="drop" aria-labelledby="navbarDropdown2">
+                              
+                             
+                                <a class="dropdown-item  letter2" style="color:white;" href="{{ url('/RAS') }}">
+                                        R&A Society 
+                                </a>
+                                <a class="dropdown-item  letter2" style="color:white;" href="{{ url('/CS') }}">
+                                        Computer Society
+                                </a>
+                                <a class="dropdown-item  letter2" style="color:white;" href="{{ url('/IMS') }}">
+                                        I&M Society
+                                </a>
+                                <a class="dropdown-item  letter2"  style="color:white;" href="{{ url('/WIE') }}">
+                                        WIE
+                                </a>
+                                <style>
+                                
+                                    .dropdown-item:hover,.dropdown-item:active{
+                                        background:#595959 !important;
+                                    }
+
+                                </style>
+
+                                </div>
+                            </li><!--
                     @guest
       @if (Route::has('register'))
       @if (Route::has('login'))
                  @auth
                        
                     @else
-                        <a href="{{ route('login') }}" class="nav-link" >Login</a>
+                        <a href="{{ route('login') }}" class="nav-link  letter2" >Login</a>
                         </li>
                         @if (Route::has('register'))
                         <li class="nav-item">
-                            <a href="{{ route('register') }}" class="nav-link" >Register</a>
+                            <a href="{{ route('register') }}" class="nav-link  letter2" >Register</a>
                             </li>
+                        
                         @endif
+                        
                     @endif
                 
             @endif
@@ -95,12 +121,12 @@ $(function () {
                                         {{ __('Logout') }}
                                     </a>
                                     @can('browse_admin')
-                                <a class="dropdown-item" href="{{ url('/admin') }}">
+                                <a class="dropdown-item  letter1" href="{{ url('/admin') }}">
                                     Administração
                                 </a>
                                 @endcan
                               
-                                <a class="dropdown-item" href="{{ route('minhaconta', Auth::user()->uuid) }}">
+                                <a class="dropdown-item  letter1" href="{{ route('minhaconta', Auth::user()->uuid) }}">
                                         Minha Conta
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;color:black;">
@@ -109,8 +135,12 @@ $(function () {
                                 </div>
                             </li>
                         @endguest
+                        -->
                    
             </li>
+            <li class="nav-item">
+                        <a class="nav-link  letter2" href="{{ url('/WIE') }}">Sobre nós</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -119,6 +149,24 @@ $(function () {
 
 @yield('content')
 
-    
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+    <div class="container text-center">
+      <small>Copyright &copy; Your Website</small>
+    </div>
+  </footer>
+
+<script>
+
+$(function () {
+    $(window).on('scroll', function () {
+        if ( $(window).scrollTop() < 100 ) {
+            $('.navbar').removeClass('shadow-sm bg-white');
+        } else {
+            $('.navbar').addClass('shadow-sm bg-white');
+        }
+    });
+});
+
+</script>
     </body>
 </html>
