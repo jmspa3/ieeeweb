@@ -53,7 +53,15 @@
                     <li class="nav-item active"><a class="nav-link  letter2" href="{{ url('/') }}">Eventos<span class="sr-only">(current)</span></a></li>
                     <li class="nav-item">
                         <a class="nav-link  letter2" href="{{ url('/feed') }}">Projetos</a></li>
-                    
+                        <li class="nav-item dropdown">
+	    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> Dropdown large  </a>
+	    <div class="dropdown-menu dropdown-large">
+           	The content of large dropdown menu. <br> lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat.
+            </div> <!-- dropdown-large.// -->
+	</li>
                     <li class="nav-item dropdown">
                                 <a id="navbarDropdown2"  class="nav-link letter2 dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                  Societies

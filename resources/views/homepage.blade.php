@@ -23,9 +23,9 @@
                 </div>
                 <div class="ml-xl-3 col-sm-6">
                 <div style="background-image: url(img/ieee3.jpg);
-    -webkit-box-shadow: 0 11px 30px #777;
-    -moz-box-shadow: 0 11px 30px #777;
-    box-shadow: 0 11px 30px #777;
+    -webkit-box-shadow: 0 1px 10px #989898;
+    -moz-box-shadow: 0 1px 10px #989898;
+    box-shadow: 0 1px 10px #989898;
     background-size: cover;
     background-position: center;
     width: 46pc;
@@ -52,7 +52,7 @@
     padding-left:80px;font-size:55px;margin-left:3%;-webkit-background-clip: text;
   color: transparent;">
                      Vê os projetos que temos para ti
-                     <a><p class="butpro letter2">Ver mais</p></a>
+                     <a><p href="{{ url('/') }}" class="butpro letter2">Ver mais</p></a>
                 </h1>
               
                 </div>
@@ -140,7 +140,7 @@
         border:1px solid 
 #585A5C
 ;
-        background:white;
+        background:transparent;
         color:
 #585A5C
 ;
